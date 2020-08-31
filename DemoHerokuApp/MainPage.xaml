@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="DemoHerokuApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DemoHerokuApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:DemoHerokuApp.Models"
+    mc:Ignorable="d"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="AllPage">
+
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <RelativePanel Grid.Row="0"  Background="#00574B" >
+                <TextBlock Text="NetWork" FontSize="30px" Foreground="#FFFFFF" RelativePanel.AlignLeftWithPanel="True" TextWrapping="Wrap" Margin="10,20" />
+            </RelativePanel>
+            <ScrollViewer Grid.Row="1" Margin="0,0,0,0">
+                <StackPanel>
+                    <TextBlock Name="LocationTextBlock" FontSize="20" Foreground="#767676" RelativePanel.AlignLeftWithPanel="True" TextWrapping="Wrap" Margin="10,10"/>
+                    <TextBlock Name="TemplateTextBlock" TextWrapping="Wrap" FontSize="25" FontWeight="Bold" Margin="10,10" Foreground="#FFFFFF" RelativePanel.Below="LocationTextBlock"/>
+                    <Image Name="Image" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="auto" Margin="10,10"/>
+                    <TextBlock TextWrapping="Wrap" Name="ContentDescriptionTextBlock" FontSize="18" Foreground="#FFFFFF" RelativePanel.Below="Image" Margin="10,0,0,0" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </ScrollViewer>
+</Page>
